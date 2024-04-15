@@ -1,0 +1,181 @@
+---
+title: "lab04"
+author: "Jason Koylass"
+---
+
+## 0. Instructions and Setup
+
+For each question below, show code.
+
+-   Don't forget to render your document frequently!
+-   Don't forget to install packages and have `install.packages()` commented out. Load packages with `library()` in the setup chunk.
+-   Don't forget to use `?` or `help()` if you're unsure about a function
+-   <mark>**EXPLAIN WHAT YOUR RESULTS MEAN!**</mark>  Think about the numbers and visualizations and explain, in words, what they mean.
+- Make sure you label all axes and legends and add a title to your plots and maps.
+
+**28 points total + 2 points extra-credit**
+
+
+```{r, setup}
+library(tidyverse)
+library(tidycensus)
+library(ggplot2)
+#theme_set(theme_bw()) uncomment to use the bw theme in all ggplot maps
+library(sf)
+library(sp)
+library(rnaturalearth)
+library(plotly)
+library(tmap)
+```
+
+## 1. Using TidyCensus
+
+**1. Use `tidycensus` to download 1. total Population and 2. one other variable that you are interested in investigating in all census tracts for a state of your choosing. Store this data in a new object. What is the class of the object? (2 points)** Hint: Since we will be mapping our data, make sure you include use `geometry = TRUE` in `get_acs()` 
+
+```{r lab4_1}
+#census_api_key("f7356a29bce0abdf5d9ce929bc0eb3a591f3fc55", install = TRUE)
+
+Pop_Florida<- get_acs(
+  geography = "tract", 
+  variables = c(total_Pop = "B02001_001",
+                MEDIAN_GROSS_RENT = "B25064_001"),
+  year = 2020,
+  output = "wide",
+  geometry = TRUE, 
+  state = "FL"
+)
+
+#Check the class of the object
+class(Pop_Florida)
+```
+
+**2. Is the data set you downloaded in question 1 projected or unprojected?  Explain in words how you know this. (2 points)**
+
+```{r lab4_2}
+st_crs(Pop_Florida) #Checks the CRS of the dataset
+```
+The data set (Pop_Florida) is using the Geographic Co-ordinate System (GCS) for NAD83. But, the data is un-projected since we have not defined a PCS for it.
+
+
+**3. Which census tract has the highest total population estimate?**
+
+```{r lab4_3 highest_total_Pop}
+summary(Pop_Florida) #returns a summary of the dataset
+#Total_pop <- Pop_Florida %>% group_by(total_PopE) #groups Florida's population by total Population
+Pop_Florida <- Pop_Florida %>% arrange(desc(total_PopE)) # arranges from highest to lowest
+Pop_Florida[1,]$NAME #returns the first row of the sorted field
+```
+The census tract with the highest total population estimate is `r Pop_Florida[1,]$NAME` 
+
+**4. How many census tracts have a current total population estimate above 10,000? Plot only these census tracts. (2 points)**
+
+```{r lab4_4}
+Pop_10000 <- Pop_Florida %>% filter(total_PopE > 10000)
+nrow(Pop_10000) # number of rows
+tm_shape(Pop_10000) +
+  tm_fill("total_PopE") +
+  tm_borders()
+# Plots the census tracts for The Population above 10,000
+```
+There are `r nrow(Pop_10000)` census tracts that have a total population estimate above 10,000.
+
+**5. Reproject your census tract data to [USA Contiguous Albers Equal Area Conic](http://spatialreference.org/ref/esri/usa-contiguous-albers-equal-area-conic/). Plot the original and the reprojected data sets.  Do you see any difference? (3 points)**  
+
+```{r lab4_5}
+Pop_Florida_albers <- st_transform(Pop_Florida, 5070)
+#plot(st_geometry(Pop_Florida))
+plot(st_geometry(Pop_Florida_albers))
+```
+
+The areas are accurately represented for the counties when mapped in the Albers projection, but the shape is distorted.
+The ALbers projection is a conic one that maintains accurate area measurements.
+
+**6. Create a new sf with only three counties in your state. What is the sum of the shape areas in these three counties? (3 points)** Hint use `st_area()`.
+
+```{r lab4_6}
+Florida_counties <- Pop_Florida_albers %>% filter(str_detect(NAME, "Marion|Levy|Alachua"))
+#st_crs(Florida_counties) - checks the co-ordinate system for Florida_counties
+tot_area <- sum(st_area(Florida_counties)/1e6)
+```
+
+The total area of the three county Florida region is `r tot_area` km^2.
+
+**7. Plot the new sf you created in question 6 using ggplot2.**
+
+```{r lab4_7}
+Florida_counties <- separate(Florida_counties, col = NAME, into = c("Tract","County","State"), sep = ",")
+
+ggplot(Florida_counties) + geom_sf(aes(fill = total_PopE)) + labs(title = "Total Population For Florida Counties", fill = "Total Population")
+```
+
+## 2. Toxic Release Inventory Sites
+
+**8. The Environmental Protection Agency keeps a Toxics Release Inventory (TRI) of toxic chemical releases and pollution prevention activities reported by industrial and federal facilities. Download the TRI data for the state you are mapping in this assignment:  https://www.epa.gov/frs/epa-frs-facilities-state-single-file-csv-download. Read your TRI .csv into R and turn it into a MULTIPOINT spatial object. (2 points)**
+
+```{r lab4_8}
+TRI_Florida <- read.csv("../data/Entire_Florida_TRI.csv")
+
+TRI_Florida_sf = st_as_sf(TRI_Florida, coords = c("Longitude", "Latitude"), crs = 4326) 
+#The line above creates a spatial multipoint object from the dataframe TRI_Florida.
+
+```
+
+**9. Plot TRI data in only the 3 counties you selected in question 6. (3 points)** 
+
+```{r lab4_9}
+TRI_Fl_county <- TRI_Florida_sf %>% filter(County == "MARION, FL" | County == "LEVY, FL" | County == "ALACHUA, FL")
+
+#ggplot() + geom_sf(aes(fill = County)) + labs(title = "Toxic Release Sites For Three County Florida Region", fill = "Toxic Releases")
+
+ggplot() +
+  geom_sf(data = Florida_counties) +
+  geom_sf(data = TRI_Fl_county)+
+  ggtitle("Toxic Release Sites For Three County Florida Region")
+  
+```
+
+**10. Use ggplot2 to create a choropleth map of your state for the second Census variable you selected in question 1.** 
+
+```{r lab4_10}
+Pop_Florida_albers <- Pop_Florida_albers %>% dplyr::rename(Rent_E = MEDIAN_GROSS_RENTE) %>% dplyr::rename(Rent_M = MEDIAN_GROSS_RENTM) #renames the median gross rent fields
+
+#%>% drop_na(MEDIAN_GROSS_RENTE) - insert if you would like to drop the tracts with no data
+ggplot(Pop_Florida_albers) + geom_sf(aes(fill = Rent_E)) + labs(title = "Median Gross Rent For Florida Counties", fill = "Median Gross Rent")
+```
+
+## 3. QGIS Map (5 points)
+
+```{r QGIS_shapefiles}
+#st_write(Florida_counties, "../data/Florida_counties_2.shp", append = FALSE) # Writes the Filtered 3 county polygon shapefile.
+#st_write(TRI_Fl_county, "../data/TRI_County_Florida.shp", append = FALSE) #writes the Toxic Releases for the 3 county region into a point shapefile.
+
+#Florida <- Pop_Florida_albers %>% dplyr::rename(Rent_E = MEDIAN_GROSS_RENTE) %>% dplyr::rename(Rent_M = MEDIAN_GROSS_RENTM) #renames the median gross rent fields
+#st_write(Florida, "../data/Florida_1.shp", append = FALSE) #writes the entire state of Florida
+
+```
+
+The above code chunk uses the `st_write()` function to write out multiple shapefiles. The first shapefile is the filtered 3 county polygon shapefile. The second shapefile is the toxic releases (points) for the 3 county region. The third shapefile is the entire state of Florida.
+
+## 4. Reflection (3 points)
+
+* code you want to remember about this assignment
+These are some links that I found useful in dealing with the ggplot and sf packages:
+(https://www.paulamoraga.com/book-spatial/the-sf-package-for-spatial-vector-data.html)
+(https://bookdown.org/lexcomber/brunsdoncomber2e/Ch3.html#reading-and-writing-spatial-data)
+
+st_transform(Pop_Florida, 5070) - this code is useful for reprojecting the data to a different projection system. In this case the Albers Equal Area Conic projection system was used.
+
+* Findings that Arose during your data exploration that you found interesting 
+When using ggplot to map the variable that I chose (i.e. Median Gross Rent) there were some tracts with no data. Take note of this code: `%>% drop_na(MEDIAN_GROSS_RENTE)`. 
+Also, before I used the `st_write()` function to create a shapefile from the state of Florida, some of the columns had to be renamed by using the piping operator, `%>%`, in addition to `dplyr::rename(new_name = old_name)` function. 
+
+
+
+
+## 5. Extra Credit (2 points)
+
+**Write out one of the spatial objects you created above as a .shp file. Use QGIS or ArcGIS to open the shape file. Take a screenshot of the shape file in your GIS program window and insert the image into this Rmarkdown document.**
+
+```{r Florida_shapefile}
+#st_write(Florida, "../data/Florida_1.shp", append = FALSE)
+```
