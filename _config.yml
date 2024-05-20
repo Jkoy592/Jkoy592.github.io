@@ -21,14 +21,17 @@ repository               : "Jkoy592/Jkoy592.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
-  name             : "Jason Koylass"
-  pronouns         : # example: "he/him"  
-  bio              : "Undergraduate Student Geography and Environmental Systems (B.S.) at UMBC. My interests include natural resource management, conservation management, and GIS related work "
-  location         : "Earth"
-  employer         : "University of Maryland Baltimore County"
-  uri              : # URL
-  email            : "jak5@umbc.edu" 
+  avatar: "profile.png"
+  name: "Jason Koylass"
+  pronouns: # example: "he/him"  
+  bio: >
+    Undergraduate Student Geography and Environmental Systems (B.S.) at UMBC. 
+    My interests include natural resource management, conservation management, 
+    and GIS related work.
+  location: "Earth"
+  employer: "University of Maryland Baltimore County"
+  uri: # URL
+  email: "jak5@umbc.edu"
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
