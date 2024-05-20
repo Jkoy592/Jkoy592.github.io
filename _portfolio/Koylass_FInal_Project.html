@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jason Koylass">
+
+<title>Water Quality Analyses Comparing Values to the Median Household Income In Florida</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="Koylass_FInal_Project_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Koylass_FInal_Project_files/libs/quarto-html/quarto.js"></script>
+<script src="Koylass_FInal_Project_files/libs/quarto-html/popper.min.js"></script>
+<script src="Koylass_FInal_Project_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Koylass_FInal_Project_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Koylass_FInal_Project_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Koylass_FInal_Project_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Koylass_FInal_Project_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Koylass_FInal_Project_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Koylass_FInal_Project_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Water Quality Analyses Comparing Values to the Median Household Income In Florida</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jason Koylass </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="water-quality-analyses-near-phosphate-mining-sites-in-florida-vs.-median-household-income" class="level1">
+<h1>Water Quality Analyses Near Phosphate Mining Sites in Florida vs.&nbsp;Median Household Income</h1>
+<section id="background" class="level3">
+<h3 class="anchored" data-anchor-id="background">Background</h3>
+<p>This project will focus on water quality (phosphate/nitrogen) data sets within the 4 counties with a high level of Phosphate Mining Areas in Florida. I am looking at the relationship of these values to the median household income among tracts. The main mining areas are located in Polk, Hillsborough, Manatee, and Hardee counties, with one mine in North Florida’s Hamilton County.</p>
+<p>Florida Phosphate Mining Areas: Phosphate mining in Florida began in the 1880s. The region known as Bone Valley is still considered one of the most economically accessible phosphate deposits in the world. The main mining areas are located in Polk, Hillsborough, Manatee, and Hardee counties, with one mine in North Florida’s Hamilton County.</p>
+<p>The mining process used is surface strip mining, which involves removing existing land cover (grassland/shrubland, wetland, or water) to expose bare ground. This method has caused significant environmental issues, particularly in the Peace River watershed. For many years, phosphate mining in this area has led to serious environmental problems, and large new mines are planned. The Florida Department of Environmental Protection (DEP) and the Southwest Florida Water Management District (SWFWMD) are responsible for implementing measures to protect the river and local communities from the impacts of mining. This includes safeguarding drinking water and supporting important tourism and commercial fishing industries.</p>
+<p>In 1998, the majority of the Peace River was classified as an impaired river under the Clean Water Act, prompting the DEP to commit to developing a cleanup strategy for the river.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="E:/GES_486/Final_project/results/Phosphate_mine.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Phosphate Mine</figcaption>
+</figure>
+</div>
+<p><strong>Process</strong></p>
+<p>At the plant, the phosphate is separated from the sand and clay. The clay slurry is pumped to a settling pond, and the phosphate is sent to a chemical processing plant where it is processed for use in fertilizer and other products. The sand is sent back to the mine site to fill in the hole after all the phosphate is dug out—years after the mining began.</p>
+<p>When phosphate miners destroy a wetland, they promise to replace it a few decades later when they’re finished—a seemingly impossible task. Forty percent of the land that’s left behind after mining is covered by the clay-slurry settling ponds. Within five years a crust forms on top of the ponds, but the stuff under the crust remains about as soft as a bowl of chocolate pudding. That means the old clay settling areas are too unstable for building. Meanwhile the sand-filled pits drain too fast to hold water—a serious problem for any would-be wetland.</p>
+</section>
+<section id="reclamation-standards-for-phosphate-mines" class="level2">
+<h2 class="anchored" data-anchor-id="reclamation-standards-for-phosphate-mines">Reclamation Standards for Phosphate Mines</h2>
+<p>Before 1975, reclamation of mined land was not required. Lands mined before July 1, 1975, are referred to as “nonmandatory” land. The Nonmandatory Land Reclamation Program provided funding for reclaiming eligible phosphate lands mined before this date.</p>
+<p>Since July 1, 1975, Florida law requires that all lands mined for phosphate be reclaimed. Land mined after this date is known as “mandatory” land. Phosphate mine operators must submit a conceptual reclamation plan to the DEP. This plan undergoes extensive evaluation, including analysis of water quantity and quality impacts, consideration of best available technology, and a focus on preserving wildlife habitat and resources.</p>
+<p><strong>Sources:</strong> * https://www.sarasotamagazine.com/news-and-profiles/2017/04/florida-phosphate * https://floridadep.gov/water/mining-mitigation/content/phosphate</p>
+<p><strong>Sources for data:</strong></p>
+<ul>
+<li>https://prodenv.dep.state.fl.us/DearWin/public/learnAboutDataInMyArea</li>
+<li>https://geodata.dep.state.fl.us/datasets/5fae7667642c496fae647d04f8869b0e/explore?location=28.340272%2C-83.677648%2C6.68&amp;showTable=true</li>
+<li>https://geodata.myfwc.com/datasets/myfwc::florida-state-waters-and-land-boundary/about</li>
+</ul>
+<section id="setup" class="level4">
+<h4 class="anchored" data-anchor-id="setup">Setup</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Linking to GEOS 3.11.2, GDAL 3.8.2, PROJ 9.3.1; sf_use_s2() is TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sp)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(spdep)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: spData</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>To access larger datasets in this package, install the spDataLarge
+package with: `install.packages('spDataLarge',
+repos='https://nowosad.github.io/drat/', type='source')`</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(olsrr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'olsrr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:datasets':
+
+    rivers</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(raster)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gstat)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tmap)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Breaking News: tmap 3.x is retiring. Please test v4, e.g. with
+remotes::install_github('r-tmap/tmap')</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:raster':
+
+    intersect, select, union</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pastecs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'pastecs'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:dplyr':
+
+    first, last</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:raster':
+
+    extract</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'tidyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:pastecs':
+
+    extract</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:raster':
+
+    extract</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ forcats   1.0.0     ✔ readr     2.1.5
+✔ lubridate 1.9.3     ✔ stringr   1.5.1
+✔ purrr     1.0.2     ✔ tibble    3.2.1</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ tidyr::extract() masks pastecs::extract(), raster::extract()
+✖ dplyr::filter()  masks stats::filter()
+✖ pastecs::first() masks dplyr::first()
+✖ dplyr::lag()     masks stats::lag()
+✖ pastecs::last()  masks dplyr::last()
+✖ dplyr::select()  masks raster::select()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidycensus)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rnaturalearth)</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'plotly'
+
+The following object is masked from 'package:ggplot2':
+
+    last_plot
+
+The following object is masked from 'package:raster':
+
+    select
+
+The following object is masked from 'package:stats':
+
+    filter
+
+The following object is masked from 'package:graphics':
+
+    layout</code></pre>
+</div>
+</div>
+</section>
+<section id="reading-in-datasets" class="level4">
+<h4 class="anchored" data-anchor-id="reading-in-datasets">Reading In DataSets</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in Water Quality files</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>Hardee_water_quality <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"../data_updated/Hardee_water_quality.csv"</span>)</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>Hillsborough_water_quality <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"../data_updated/Hillsborough_water_quality_1.csv"</span>)</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>Manatee_water_quality <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"../data_updated/Manatee_water_quality.csv"</span>)</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>Polk_water_quality <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"../data_updated/Polk_water_quality.csv"</span>)</span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a><span class="co">#extract coords out from the files to make them into an sf object</span></span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a>Hardee_sf <span class="ot">&lt;-</span> <span class="fu">st_as_sf</span>(Hardee_water_quality, <span class="at">coords =</span> <span class="fu">c</span>(<span class="st">"DEP.Longitude"</span>, <span class="st">"DEP.Latitude"</span>), <span class="at">crs =</span> <span class="dv">4326</span>, <span class="at">agr =</span> <span class="st">"constant"</span>)</span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a>Hillsborough_sf <span class="ot">&lt;-</span> <span class="fu">st_as_sf</span>(Hillsborough_water_quality, <span class="at">coords =</span> <span class="fu">c</span>(<span class="st">"DEP.Longitude"</span>, <span class="st">"DEP.Latitude"</span>), <span class="at">crs =</span> <span class="dv">4326</span>, <span class="at">agr =</span> <span class="st">"constant"</span>)</span>
+<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a>Manatee_sf <span class="ot">&lt;-</span> <span class="fu">st_as_sf</span>(Manatee_water_quality, <span class="at">coords =</span> <span class="fu">c</span>(<span class="st">"DEP.Longitude"</span>, <span class="st">"DEP.Latitude"</span>), <span class="at">crs =</span> <span class="dv">4326</span>, <span class="at">agr =</span> <span class="st">"constant"</span>)</span>
+<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a>Polk_sf <span class="ot">&lt;-</span> <span class="fu">st_as_sf</span>(Polk_water_quality, <span class="at">coords =</span> <span class="fu">c</span>(<span class="st">"DEP.Longitude"</span>, <span class="st">"DEP.Latitude"</span>), <span class="at">crs =</span> <span class="dv">4326</span>, <span class="at">agr =</span> <span class="st">"constant"</span>)</span>
+<span id="cb29-19"><a href="#cb29-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-20"><a href="#cb29-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Write Files into shapefiles and check to see if they plot</span></span>
+<span id="cb29-21"><a href="#cb29-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-22"><a href="#cb29-22" aria-hidden="true" tabindex="-1"></a><span class="co"># st_write(Hardee_sf, "../data_updated/Hardee_1.geojson", append = FALSE)</span></span>
+<span id="cb29-23"><a href="#cb29-23" aria-hidden="true" tabindex="-1"></a><span class="co"># plot(st_geometry(Hardee_sf))</span></span>
+<span id="cb29-24"><a href="#cb29-24" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb29-25"><a href="#cb29-25" aria-hidden="true" tabindex="-1"></a><span class="co"># st_write(Hillsborough_sf,"../data_updated/Hillsborough.geojson")</span></span>
+<span id="cb29-26"><a href="#cb29-26" aria-hidden="true" tabindex="-1"></a><span class="co"># plot(st_geometry(Hillsborough_sf))</span></span>
+<span id="cb29-27"><a href="#cb29-27" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb29-28"><a href="#cb29-28" aria-hidden="true" tabindex="-1"></a><span class="co"># st_write(Manatee_sf,"../data_updated/Manatee.geojson")</span></span>
+<span id="cb29-29"><a href="#cb29-29" aria-hidden="true" tabindex="-1"></a><span class="co"># plot(st_geometry(Manatee_sf))</span></span>
+<span id="cb29-30"><a href="#cb29-30" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb29-31"><a href="#cb29-31" aria-hidden="true" tabindex="-1"></a><span class="co"># st_write(Polk_sf,"../data_updated/Polk.geojson")</span></span>
+<span id="cb29-32"><a href="#cb29-32" aria-hidden="true" tabindex="-1"></a><span class="co"># plot(st_geometry(Polk_sf))</span></span>
+<span id="cb29-33"><a href="#cb29-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-34"><a href="#cb29-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-35"><a href="#cb29-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Ensure the water quality data columns have the same data type</span></span>
+<span id="cb29-36"><a href="#cb29-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-37"><a href="#cb29-37" aria-hidden="true" tabindex="-1"></a>Hardee_sf <span class="ot">&lt;-</span> Hardee_sf <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">Org.Result.Value =</span> <span class="fu">as.character</span>(Org.Result.Value))</span>
+<span id="cb29-38"><a href="#cb29-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-39"><a href="#cb29-39" aria-hidden="true" tabindex="-1"></a>Hillsborough_sf <span class="ot">&lt;-</span> Hillsborough_sf <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">Org.Result.Value =</span> <span class="fu">as.character</span>(Org.Result.Value))</span>
+<span id="cb29-40"><a href="#cb29-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-41"><a href="#cb29-41" aria-hidden="true" tabindex="-1"></a>Polk_sf <span class="ot">&lt;-</span> Polk_sf <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">Org.Result.Value =</span> <span class="fu">as.character</span>(Org.Result.Value))</span>
+<span id="cb29-42"><a href="#cb29-42" aria-hidden="true" tabindex="-1"></a><span class="co"># Manatee_sf &lt;- Manatee_sf %&gt;% mutate(Org.Result.Value = as.character(Org.Result.Value))</span></span>
+<span id="cb29-43"><a href="#cb29-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-44"><a href="#cb29-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Join the four counties water quality files</span></span>
+<span id="cb29-45"><a href="#cb29-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-46"><a href="#cb29-46" aria-hidden="true" tabindex="-1"></a>water_quality_sf <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(Hardee_sf, Hillsborough_sf, Manatee_sf, Polk_sf)</span>
+<span id="cb29-47"><a href="#cb29-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-48"><a href="#cb29-48" aria-hidden="true" tabindex="-1"></a>water_quality_sf <span class="ot">&lt;-</span> water_quality_sf <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">Org.Result.Value =</span> <span class="fu">as.numeric</span>(Org.Result.Value))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: There was 1 warning in `stopifnot()`.
+ℹ In argument: `Org.Result.Value = as.numeric(Org.Result.Value)`.
+Caused by warning:
+! NAs introduced by coercion</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co">#census_api_key("f7356a29bce0abdf5d9ce929bc0eb3a591f3fc55", install = TRUE)</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load data from the ACS for Florida </span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in Florida data set census data on total population and mddhinc, and the percent agricultural area, and percent tree canopy </span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>Florida<span class="ot">&lt;-</span> <span class="fu">get_acs</span>(</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">geography =</span> <span class="st">"tract"</span>, </span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">variables =</span> <span class="fu">c</span>(<span class="at">total_Pop =</span> <span class="st">"B02001_001"</span>,</span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>                <span class="at">MEDIAN_HHIncome =</span> <span class="st">"B19013_001"</span>),</span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">year =</span> <span class="dv">2020</span>,</span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">output =</span> <span class="st">"wide"</span>,</span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">geometry =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">state =</span> <span class="st">"FL"</span></span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Getting data from the 2016-2020 5-year ACS</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Downloading feature geometry from the Census website.  To cache shapefiles for use in future sessions, set `options(tigris_use_cache = TRUE)`.</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+  |                                                                            
+  |                                                                      |   0%
+  |                                                                            
+  |                                                                      |   1%
+  |                                                                            
+  |=                                                                     |   2%
+  |                                                                            
+  |==                                                                    |   3%
+  |                                                                            
+  |===                                                                   |   4%
+  |                                                                            
+  |====                                                                  |   5%
+  |                                                                            
+  |====                                                                  |   6%
+  |                                                                            
+  |=====                                                                 |   7%
+  |                                                                            
+  |======                                                                |   8%
+  |                                                                            
+  |=======                                                               |  10%
+  |                                                                            
+  |========                                                              |  11%
+  |                                                                            
+  |=========                                                             |  12%
+  |                                                                            
+  |=========                                                             |  13%
+  |                                                                            
+  |===========                                                           |  15%
+  |                                                                            
+  |===========                                                           |  16%
+  |                                                                            
+  |============                                                          |  17%
+  |                                                                            
+  |=============                                                         |  18%
+  |                                                                            
+  |=============                                                         |  19%
+  |                                                                            
+  |==============                                                        |  20%
+  |                                                                            
+  |==============                                                        |  21%
+  |                                                                            
+  |===============                                                       |  21%
+  |                                                                            
+  |===============                                                       |  22%
+  |                                                                            
+  |================                                                      |  22%
+  |                                                                            
+  |================                                                      |  23%
+  |                                                                            
+  |=================                                                     |  24%
+  |                                                                            
+  |==================                                                    |  25%
+  |                                                                            
+  |==================                                                    |  26%
+  |                                                                            
+  |===================                                                   |  27%
+  |                                                                            
+  |===================                                                   |  28%
+  |                                                                            
+  |====================                                                  |  29%
+  |                                                                            
+  |=====================                                                 |  29%
+  |                                                                            
+  |=====================                                                 |  30%
+  |                                                                            
+  |======================                                                |  31%
+  |                                                                            
+  |======================                                                |  32%
+  |                                                                            
+  |=======================                                               |  32%
+  |                                                                            
+  |=======================                                               |  33%
+  |                                                                            
+  |========================                                              |  34%
+  |                                                                            
+  |=========================                                             |  35%
+  |                                                                            
+  |=========================                                             |  36%
+  |                                                                            
+  |==========================                                            |  37%
+  |                                                                            
+  |===========================                                           |  38%
+  |                                                                            
+  |===========================                                           |  39%
+  |                                                                            
+  |============================                                          |  40%
+  |                                                                            
+  |============================                                          |  41%
+  |                                                                            
+  |=============================                                         |  41%
+  |                                                                            
+  |==============================                                        |  42%
+  |                                                                            
+  |==============================                                        |  43%
+  |                                                                            
+  |===============================                                       |  44%
+  |                                                                            
+  |===============================                                       |  45%
+  |                                                                            
+  |================================                                      |  45%
+  |                                                                            
+  |================================                                      |  46%
+  |                                                                            
+  |=================================                                     |  47%
+  |                                                                            
+  |=================================                                     |  48%
+  |                                                                            
+  |==================================                                    |  49%
+  |                                                                            
+  |===================================                                   |  50%
+  |                                                                            
+  |===================================                                   |  51%
+  |                                                                            
+  |====================================                                  |  52%
+  |                                                                            
+  |=====================================                                 |  52%
+  |                                                                            
+  |=====================================                                 |  53%
+  |                                                                            
+  |======================================                                |  54%
+  |                                                                            
+  |======================================                                |  55%
+  |                                                                            
+  |=======================================                               |  56%
+  |                                                                            
+  |========================================                              |  57%
+  |                                                                            
+  |========================================                              |  58%
+  |                                                                            
+  |=========================================                             |  59%
+  |                                                                            
+  |==========================================                            |  60%
+  |                                                                            
+  |===========================================                           |  61%
+  |                                                                            
+  |===========================================                           |  62%
+  |                                                                            
+  |============================================                          |  62%
+  |                                                                            
+  |============================================                          |  63%
+  |                                                                            
+  |=============================================                         |  64%
+  |                                                                            
+  |==============================================                        |  65%
+  |                                                                            
+  |==============================================                        |  66%
+  |                                                                            
+  |===============================================                       |  67%
+  |                                                                            
+  |================================================                      |  68%
+  |                                                                            
+  |================================================                      |  69%
+  |                                                                            
+  |=================================================                     |  70%
+  |                                                                            
+  |=================================================                     |  71%
+  |                                                                            
+  |==================================================                    |  71%
+  |                                                                            
+  |===================================================                   |  72%
+  |                                                                            
+  |===================================================                   |  73%
+  |                                                                            
+  |====================================================                  |  74%
+  |                                                                            
+  |====================================================                  |  75%
+  |                                                                            
+  |=====================================================                 |  75%
+  |                                                                            
+  |=====================================================                 |  76%
+  |                                                                            
+  |======================================================                |  77%
+  |                                                                            
+  |======================================================                |  78%
+  |                                                                            
+  |=======================================================               |  79%
+  |                                                                            
+  |========================================================              |  79%
+  |                                                                            
+  |========================================================              |  80%
+  |                                                                            
+  |=========================================================             |  81%
+  |                                                                            
+  |==========================================================            |  82%
+  |                                                                            
+  |==========================================================            |  83%
+  |                                                                            
+  |===========================================================           |  84%
+  |                                                                            
+  |===========================================================           |  85%
+  |                                                                            
+  |============================================================          |  86%
+  |                                                                            
+  |=============================================================         |  87%
+  |                                                                            
+  |=============================================================         |  88%
+  |                                                                            
+  |==============================================================        |  89%
+  |                                                                            
+  |===============================================================       |  90%
+  |                                                                            
+  |================================================================      |  91%
+  |                                                                            
+  |=================================================================     |  92%
+  |                                                                            
+  |=================================================================     |  93%
+  |                                                                            
+  |==================================================================    |  94%
+  |                                                                            
+  |===================================================================   |  95%
+  |                                                                            
+  |===================================================================   |  96%
+  |                                                                            
+  |====================================================================  |  97%
+  |                                                                            
+  |====================================================================  |  98%
+  |                                                                            
+  |===================================================================== |  98%
+  |                                                                            
+  |======================================================================|  99%
+  |                                                                            
+  |======================================================================| 100%</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">st_transform</span>(Florida, <span class="at">crs=</span> <span class="dv">4269</span>) <span class="co"># GCS is NAD83</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Simple feature collection with 5160 features and 6 fields (with 38 geometries empty)
+Geometry type: MULTIPOLYGON
+Dimension:     XY
+Bounding box:  xmin: -87.63494 ymin: 24.5213 xmax: -80.03136 ymax: 31.00089
+Geodetic CRS:  NAD83
+First 10 features:
+         GEOID                                          NAME total_PopE
+1  12031013200       Census Tract 132, Duval County, Florida       2737
+2  12031011600       Census Tract 116, Duval County, Florida       3811
+3  12031012000       Census Tract 120, Duval County, Florida       5056
+4  12031014500       Census Tract 145, Duval County, Florida       4234
+5  12047960300   Census Tract 9603, Hamilton County, Florida       1705
+6  12005001900          Census Tract 19, Bay County, Florida       4499
+7  12005002200          Census Tract 22, Bay County, Florida       4769
+8  12017450201  Census Tract 4502.01, Citrus County, Florida       3960
+9  12035060107  Census Tract 601.07, Flagler County, Florida       5371
+10 12053041201 Census Tract 412.01, Hernando County, Florida       4891
+   total_PopM MEDIAN_HHIncomeE MEDIAN_HHIncomeM                       geometry
+1         340            54318            15749 MULTIPOLYGON (((-81.70785 3...
+2         800            34149            13856 MULTIPOLYGON (((-81.73076 3...
+3         603            53707             4483 MULTIPOLYGON (((-81.78369 3...
+4        1056            51836             4462 MULTIPOLYGON (((-81.55915 3...
+5         291            39583             8317 MULTIPOLYGON (((-82.88659 3...
+6         516            65282             6163 MULTIPOLYGON (((-85.66319 3...
+7         935            37500            15690 MULTIPOLYGON (((-85.69215 3...
+8         430            32164             3223 MULTIPOLYGON (((-82.47355 2...
+9         628            52877             8221 MULTIPOLYGON (((-81.23191 2...
+10        796            55739             6750 MULTIPOLYGON (((-82.57988 2...</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>Florida_counties <span class="ot">&lt;-</span> Florida <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="fu">str_detect</span>(NAME, <span class="st">"Polk|Hillsborough|Manatee|Hardee"</span>))</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>Florida_counties <span class="ot">&lt;-</span> <span class="fu">separate</span>(Florida_counties, <span class="at">col =</span> NAME, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"Tract"</span>,<span class="st">"County"</span>,<span class="st">"State"</span>), <span class="at">sep =</span> <span class="st">","</span>)</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="co"># st_write(Florida, "../data_updated/Florida_1.shp", append = FALSE )</span></span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a><span class="co"># st_write(Florida_counties, "../data_updated/Florida_counties.geojson", append = TRUE)</span></span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Florida &lt;- separate(Florida, col = NAME, into = c("Tract","County","State"), sep = ",")</span></span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a><span class="co"># st_write(Florida, "../data_updated/Florida.geojson", append = TRUE)</span></span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>water_quality_sf <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(water_quality_sf, <span class="at">crs =</span> <span class="fu">st_crs</span>(Florida_counties))</span>
+<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform the spatial join to add water quality values to the counties</span></span>
+<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a>water_quality <span class="ot">&lt;-</span> <span class="fu">st_join</span>(Florida_counties, water_quality_sf, <span class="at">join =</span> st_intersects)</span>
+<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a><span class="co"># st_write(water_quality, "../data_updated/water_quality_merged.geojson")</span></span>
+<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">st_geometry</span>(water_quality))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Koylass_FInal_Project_files/figure-html/reading_and_writing_census_data_2-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read shapefiles for Phosphate Mines In Florida (2020 &amp; 2022)</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>Phosphate_mines <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"../data_updated/Phosphate_mined_2020.geojson"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Reading layer `Phosphate_mined_2020' from data source 
+  `E:\GES_486\Final_project\data_updated\Phosphate_mined_2020.geojson' 
+  using driver `GeoJSON'
+Simple feature collection with 315 features and 10 fields
+Geometry type: MULTIPOLYGON
+Dimension:     XY
+Bounding box:  xmin: -82.95369 ymin: 27.46063 xmax: -81.69582 ymax: 30.51925
+Geodetic CRS:  WGS 84</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>non_Phosphate_mines <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"../data_updated/Non_Phosphate_2022.geojson"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Reading layer `Mandatory_Non-Phosphate_2022_-_Released_Mines' from data source 
+  `E:\GES_486\Final_project\data_updated\Non_Phosphate_2022.geojson' 
+  using driver `GeoJSON'
+Simple feature collection with 103 features and 22 fields
+Geometry type: MULTIPOLYGON
+Dimension:     XY
+Bounding box:  xmin: -87.26773 ymin: 25.81171 xmax: -80.32274 ymax: 30.97812
+Geodetic CRS:  WGS 84</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">st_geometry</span>(Phosphate_mines))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Koylass_FInal_Project_files/figure-html/reading_and_writing_data_2-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in Land Cover</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>Land_cover <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"../data_updated/Land_Use.geojson"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Reading layer `Statewide_Land_Use_Land_Cover' from data source 
+  `E:\GES_486\Final_project\data_updated\Land_Use.geojson' using driver `GeoJSON'
+Simple feature collection with 18325 features and 13 fields
+Geometry type: POLYGON
+Dimension:     XY
+Bounding box:  xmin: -87.60355 ymin: 26.57746 xmax: -80.7593 ymax: 31.00073
+Geodetic CRS:  WGS 84</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot(st_geometry(Land_cover))</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in Conservation Lands</span></span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>Conservation_FL <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"../data_updated/FL_Conservation_Lands.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Reading layer `FL_Conservation_Lands' from data source 
+  `E:\GES_486\Final_project\data_updated\FL_Conservation_Lands.csv' 
+  using driver `CSV'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: no simple feature geometries present: returning a data.frame or tbl_df</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>Major_hwys <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"../data_updated/majhwys_FL/majhwys_apr24.shp"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Reading layer `majhwys_apr24' from data source 
+  `E:\GES_486\Final_project\data_updated\majhwys_FL\majhwys_apr24.shp' 
+  using driver `ESRI Shapefile'
+Simple feature collection with 2923 features and 18 fields
+Geometry type: LINESTRING
+Dimension:     XYM
+Bounding box:  xmin: 61945.75 ymin: 63014.82 xmax: 792467.4 ymax: 780731.5
+m_range:       mmin: -2.35e-05 mmax: 63.67598
+Projected CRS: NAD83(HARN) / Florida GDL Albers</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">st_crs</span>(Major_hwys)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Coordinate Reference System:
+  User input: NAD83(HARN) / Florida GDL Albers 
+  wkt:
+PROJCRS["NAD83(HARN) / Florida GDL Albers",
+    BASEGEOGCRS["NAD83(HARN)",
+        DATUM["NAD83 (High Accuracy Reference Network)",
+            ELLIPSOID["GRS 1980",6378137,298.257222101,
+                LENGTHUNIT["metre",1]]],
+        PRIMEM["Greenwich",0,
+            ANGLEUNIT["degree",0.0174532925199433]],
+        ID["EPSG",4152]],
+    CONVERSION["Florida GDL Albers (meter)",
+        METHOD["Albers Equal Area",
+            ID["EPSG",9822]],
+        PARAMETER["Latitude of false origin",24,
+            ANGLEUNIT["degree",0.0174532925199433],
+            ID["EPSG",8821]],
+        PARAMETER["Longitude of false origin",-84,
+            ANGLEUNIT["degree",0.0174532925199433],
+            ID["EPSG",8822]],
+        PARAMETER["Latitude of 1st standard parallel",24,
+            ANGLEUNIT["degree",0.0174532925199433],
+            ID["EPSG",8823]],
+        PARAMETER["Latitude of 2nd standard parallel",31.5,
+            ANGLEUNIT["degree",0.0174532925199433],
+            ID["EPSG",8824]],
+        PARAMETER["Easting at false origin",400000,
+            LENGTHUNIT["metre",1],
+            ID["EPSG",8826]],
+        PARAMETER["Northing at false origin",0,
+            LENGTHUNIT["metre",1],
+            ID["EPSG",8827]]],
+    CS[Cartesian,2],
+        AXIS["easting (X)",east,
+            ORDER[1],
+            LENGTHUNIT["metre",1]],
+        AXIS["northing (Y)",north,
+            ORDER[2],
+            LENGTHUNIT["metre",1]],
+    USAGE[
+        SCOPE["State-wide spatial data management."],
+        AREA["United States (USA) - Florida."],
+        BBOX[24.41,-87.63,31.01,-79.97]],
+    ID["EPSG",3087]]</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Transform coordinate systems </span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>Phosphate_mines <span class="ot">&lt;-</span> <span class="fu">st_transform</span>(water_quality, <span class="at">crs =</span> <span class="fu">st_crs</span>(Florida_counties))</span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="fu">st_crs</span>(Phosphate_mines)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Coordinate Reference System:
+  User input: NAD83 
+  wkt:
+GEOGCRS["NAD83",
+    DATUM["North American Datum 1983",
+        ELLIPSOID["GRS 1980",6378137,298.257222101,
+            LENGTHUNIT["metre",1]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["latitude",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["longitude",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    ID["EPSG",4269]]</code></pre>
+</div>
+</div>
+</section>
+<section id="raster" class="level4">
+<h4 class="anchored" data-anchor-id="raster">Raster</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>water_quality <span class="ot">&lt;-</span> water_quality[<span class="sc">!</span><span class="fu">is.na</span>(water_quality<span class="sc">$</span>DEP.Result.Value.Number), ]</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to spatial points dataframe</span></span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>water_quality_sp <span class="ot">&lt;-</span> <span class="fu">as</span>(water_quality, <span class="st">"Spatial"</span>)</span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a raster grid</span></span>
+<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a>r <span class="ot">&lt;-</span> <span class="fu">raster</span>(<span class="fu">extent</span>(water_quality_sp), <span class="at">resolution =</span> <span class="dv">50</span>)</span>
+<span id="cb54-8"><a href="#cb54-8" aria-hidden="true" tabindex="-1"></a>r <span class="ot">&lt;-</span> <span class="fu">rasterize</span>(water_quality_sp, r, <span class="at">field =</span> <span class="st">"DEP.Result.Value.Number"</span>, <span class="at">fun =</span> mean)</span>
+<span id="cb54-9"><a href="#cb54-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-10"><a href="#cb54-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the raster</span></span>
+<span id="cb54-11"><a href="#cb54-11" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(r)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Koylass_FInal_Project_files/figure-html/rasterize_water_quality-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="regression-model" class="level4">
+<h4 class="anchored" data-anchor-id="regression-model">Regression Model</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ORDINARY LEAST SQUARES (OLS) REGRESSION MODEL</span></span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>mod <span class="ot">&lt;-</span>  MEDIAN_HHIncomeE <span class="sc">~</span> DEP.Result.Value.Number</span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>reg1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(mod,<span class="at">data=</span>water_quality)</span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(reg1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = mod, data = water_quality)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-45791 -23413  -6738  16116  79006 
+
+Coefficients:
+                        Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)              68190.8      184.4  369.77   &lt;2e-16 ***
+DEP.Result.Value.Number  -2104.0      203.4  -10.34   &lt;2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 27600 on 33326 degrees of freedom
+  (406 observations deleted due to missingness)
+Multiple R-squared:  0.003199,  Adjusted R-squared:  0.00317 
+F-statistic:   107 on 1 and 33326 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="co"># MODEL DIAGNOSTICS</span></span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting residual plots</span></span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ols_plot_resid_qq</span>(reg1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Koylass_FInal_Project_files/figure-html/Regression_models-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ols_plot_resid_lev</span>(reg1) <span class="co"># plots residuals against leverage (from olssr package)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Koylass_FInal_Project_files/figure-html/Regression_models-2.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ols_plot_cooksd_bar</span>(reg1) <span class="co"># outlier analysis tool working with Cook's Distance (D)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Koylass_FInal_Project_files/figure-html/Regression_models-3.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ols_plot_cooksd_chart</span>(reg1) <span class="co"># Cook's Distance chart</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Koylass_FInal_Project_files/figure-html/Regression_models-4.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="resultsmaps" class="level2">
+<h2 class="anchored" data-anchor-id="resultsmaps">Results/Maps</h2>
+<p><strong>Significance Testing</strong></p>
+<p>The p-value associated with Moran’s I is a measure of the statistical significance of the observed spatial autocorrelation. In this analysis, the p-value is <strong>less than 0.05</strong>, indicating that the observed Moran’s I value is statistically significant.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="E:/GES_486/Final_project/results/mod_summary.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Signifcance Testing</figcaption>
+</figure>
+</div>
+<p><strong>Interpretation of p-value</strong></p>
+<p>A p-value less than 0.05 suggests that there is less than a 5% chance that the observed spatial pattern is due to random chance. Therefore, we can reject the null hypothesis of no spatial autocorrelation and conclude that the observed slight negative spatial autocorrelation is statistically significant.</p>
+<p><strong>Implications</strong></p>
+<p>The negative Moran’s I value, though weak, combined with a statistically significant p-value, implies that areas with higher income levels might be slightly associated with lower phosphate levels. This could reflect socioeconomic factors influencing environmental management practices or infrastructure quality.</p>
+<p><strong>Moran’s I</strong></p>
+<p>Moran’s I is a measure of spatial autocorrelation, which quantifies how similar or dissimilar a variable is across neighboring spatial units. It ranges from -1 (perfect negative autocorrelation) to +1 (perfect positive autocorrelation), with 0 indicating no spatial autocorrelation.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="E:/GES_486/Final_project/results/Analysis_mdhinc.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Spatial Analysis (GeoDa)</figcaption>
+</figure>
+</div>
+<p>The Moran’s I value for this analysis is <strong>-0.035</strong>, indicating a slight negative spatial autocorrelation. This suggests that areas with higher median household income tend to have slightly lower phosphate values in their vicinity, although this relationship is very weak.</p>
+<p><strong>Interpretation</strong></p>
+<p>A Moran’s I value of -0.035 suggests a minimal tendency for spatial clustering of dissimilar values. In practical terms, it means that there is a slight inverse relationship between median household income and water quality values in neighboring areas. However, the value is close to zero, indicating that the relationship is not strong.</p>
+<p>The negative Moran’s I value, though weak, could imply that areas with higher income levels might be better equipped to manage or reduce phosphate levels through better environmental practices or infrastructure. Conversely, it could also reflect that areas with higher phosphate levels, often associated with agricultural runoff, might not have as high income levels.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="E:/GES_486/Final_project/results/bivariate_map.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Bivariate Chorpleth Map</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="E:/GES_486/Final_project/results/clustering.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">CLustering Map</figcaption>
+</figure>
+</div>
+</section>
+<section id="reflection" class="level2">
+<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
+<ul>
+<li><p>What went well and didn’t go well for this project? What would you do differently next time?</p></li>
+<li><p>What went well and didn’t go well in the class? What would you have liked to have learned?</p></li>
+</ul>
+<p>I found this analysis of data particularly interesting to work with. Generating the bivariate legend was very difficult. I had to find a good balance of colors.</p>
+<p>The analysis of the Moran’s I value provides insights into the spatial relationship between median household income and phosphate values. Although the relationship is weak, the slight negative autocorrelation suggests potential areas for further investigation into the socio-environmental dynamics at play.</p>
+<p>Future analyses could explore additional variables, different spatial scales, and more sophisticated spatial modeling techniques to further understand the patterns observed in this study.</p>
+<p><strong>THE END</strong></p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
