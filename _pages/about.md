@@ -17,6 +17,8 @@ Brief Education
 B.S. Geography and Environmental Systems (May 2025)
 
 Final Project
+======
+This project will focus on water quality (phosphate/nitrogen) data sets within the 4 counties with a high level of Phosphate Mining Areas in Florida. I am looking at the relationship of these values to the median household income among tracts. The main mining areas are located in Polk, Hillsborough, Manatee, and Hardee counties, with one mine in North Florida's Hamilton County.
 ------
 
 
