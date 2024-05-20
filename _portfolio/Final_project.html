@@ -4,3 +4,66 @@ excerpt: "Spatial Analysis of Median Household Income vs Phosphate Levels Among 
 collection: portfolio
 ---
 This project involves a detailed spatial analysis of phosphate levels in various regions and compares them with the median household income. The goal is to understand if there is any correlation between economic status and environmental factors.
+<h1>Final Project Spatial Analysis</h1>
+
+Introduction:
+Florida Phosphate Mining Areas:
+Phosphate mining in Florida began in the 1880s. The region known as Bone Valley is still considered one of the most economically accessible phosphate deposits in the world. The main mining areas are located in Polk, Hillsborough, Manatee, and Hardee counties, with one mine in North Florida's Hamilton County.
+The mining process used is surface strip mining, which involves removing existing land cover (grassland/shrubland, wetland, or water) to expose bare ground. This method has caused significant environmental issues, particularly in the Peace River watershed. For many years, phosphate mining in this area has led to serious environmental problems, and large new mines are planned. The Florida Department of Environmental Protection (DEP) and the Southwest Florida Water Management District (SWFWMD) are responsible for implementing measures to protect the river and local communities from the impacts of mining. This includes safeguarding drinking water and supporting important tourism and commercial fishing industries.
+In 1998, the majority of the Peace River was classified as an impaired river under the Clean Water Act, prompting the DEP to commit to developing a cleanup strategy for the river.
+
+  <br/><img src='/images/Phosphate.PNG'"  alt="Phosphate Mine">
+
+
+Phosphate Mine
+Reclamation Standards for Phosphate Mines:
+What are the reclamation standards for phosphate mines?
+Prior to 1975, reclamation of mined land was not required. Lands mined prior to July 1, 1975, are called “nonmandatory” land. The Nonmandatory Land Reclamation Program provided funding for the reclamation of eligible phosphate lands mined before July 1975.
+The Florida Legislature requires that all lands mined for phosphate after July 1, 1975, be reclaimed. Land mined during or after 1975 that is required to be reclaimed is called “mandatory” land. Phosphate mine operators are required to provide the department with a conceptual reclamation plan. Part of our extensive evaluation of reclamation plan design includes analysis of water quantity and quality impacts, consideration of best available technology, and focusing on the preservation of wildlife habitat and resources.
+Source: https://floridadep.gov/water/mining-mitigation/content/phosphate
+
+Phosphate levels in water quality have been a growing concern in Florida, due to their potential environmental impacts. At the same time, socioeconomic factors, such as median household income, can influence the ability of communities to address water quality issues. This study aims to analyze the spatial autocorrelation of phosphate levels in Florida water quality data and its relationship with median household income.
+
+Data and Methods:
+Phosphate and Nitrogen levels (mg/L) water quality data was gathered from the and median household income data were collected for Florida counties. The phosphate level data was obtained from environmental monitoring stations, while the median household income data was sourced from the U.S. Census Bureau. The data was then merged and analyzed using geoDa software. A spatial weights matrix was created based on the proximity of counties, and Moran's I test was conducted to assess the spatial autocorrelation of phosphate levels.
+A number of maps were created to show this relationship.
+Sources: ACS Community Census Bureau
+https://prodenv.dep.state.fl.us/DearWin/public/learnAboutDataInMyArea - water quality
+https://geodata.dep.state.fl.us/datasets/5fae7667642c496fae647d04f8869b0e/explore?location=28.340272%2C-83.677648%2C6.68&showTable=true - shapefile for Phosphate mines
+
+  <br/><img src='/images/bivariate_map.PNG'"  alt="Bivariate Map">
+
+Discussion:
+Preliminary bivariate analysis revealed a significant negative spatial autocorrelation between phosphate levels and median household income in Florida water quality data (Moran's I = -0.035, p-value < 0.05). This indicates that high phosphate levels in one county are likely to be associated with lower median household income in neighboring counties.
+In addition to the Moran's I test, Local Indicators of Spatial Association (LISA) analysis was conducted to identify local clusters of phosphate levels in Florida water quality data. LISA analysis identifies local clusters of high and low phosphate levels, as well as spatial outliers. The LISA P-values were calculated to assess the significance of these clusters. A high LISA P-value (e.g., p < 0.05) indicates a significant cluster of high or low phosphate levels, suggesting that these areas require targeted attention in water quality management.
+
+Conclusion:
+The findings of this study indicate that phosphate levels in Florida water quality data exhibit significant negative spatial autocorrelation (Moran's I = -0.035, p-value < 0.05). This suggests that high phosphate levels in one county are likely to be associated with lower phosphate levels in neighboring counties. Furthermore, a relationship between phosphate levels and median household income was identified, suggesting that counties with higher median household incomes may face greater challenges in addressing water quality issues.Future research should focus on understanding the underlying factors contributing to these relationships and developing targeted strategies to improve water quality in Florida counties.
+
+Legal and Regulatory Issues, and Policies associated with phosphate mines in Florida.
+Phosphate mining in Florida is governed by a range of legal and regulatory frameworks designed to protect the environment and promote sustainable development. Key aspects include:
+Environmental Protection Agency (EPA) Regulations: The EPA sets standards for water and air quality, requiring mining operations to minimize environmental impacts. It enforces the Clean Water Act and the Clean Air Act, regulating pollutant discharges into water bodies and air emissions.
+Florida Department of Environmental Protection (FDEP) Regulations: The FDEP oversees state mining regulations, including permitting, inspections, and enforcement. It manages the Florida Phosphate Program, which specifically regulates phosphate mining.
+Florida Water Management Districts: The state's five water management districts regulate water resources and ensure sustainable practices. Mining operations must adhere to their rules to protect water resources and minimize environmental impacts.
+Endangered Species Act (ESA): The ESA protects threatened and endangered species, including those affected by phosphate mining in Florida. Operations must comply with ESA regulations to avoid harming these species and their habitats.
+Land Reclamation: Florida mandates land reclamation and restoration post-mining. The Surface Mining Control and Reclamation Act (SMCRA) requires operators to restore land to its original condition or better.
+Mining Permitting: Phosphate mining requires various permits, such as environmental resource, air emission, and water use permits. The permitting process ensures compliance with environmental regulations.
+Community Engagement: Mining operations may face local opposition due to environmental, property value, and public health concerns. Companies must engage with communities to address these issues.
+Public Health: Mining impacts on air and water quality can affect public health. Companies must comply with health and safety regulations to minimize these impacts.
+Mining Waste Management: Phosphate mining generates significant waste, including radioactive materials. Florida's regulations ensure safe disposal and minimal environmental impact.
+Financial Assurance: Mining companies must provide financial assurance for land reclamation and restoration costs, ensuring the government is not left with these financial burdens post-mining.
+Mitigation Banking: This market-based approach allows companies to purchase mitigation credits to offset environmental impacts, promoting sustainable development.
+Community Compensation: Companies may compensate communities affected by mining operations through infrastructure improvements or job opportunities.
+Public Scrutiny: Phosphate mining is subject to public scrutiny and potential opposition from various stakeholders. Companies must address these concerns to gain social acceptance.
+Legal Challenges:** Phosphate mining operations in Florida may face legal challenges from environmental groups, local communities, or other stakeholders. Mining companies must be prepared to defend their operations in court and demonstrate compliance with regulatory requirements and environmental protection measures.
+In summary, phosphate mining in Florida is subject to various legal and regulatory issues, as well as policies aimed at protecting the environment and promoting sustainable development. Mining companies must comply with these regulations and engage with stakeholders to ensure sustainable development and social acceptance.
+
+Reflection
+What went well and didn’t go well for this project? What would you do differently next time?
+What went well and didn’t go well in the class? What would you have liked to have learned?
+I found this analysis of data particularly interesting to work with. Generating the bivariate legend was very difficult. I had to find a good balance of colors. 
+The analysis of the Moran's I value provides insights into the spatial relationship between median household income and phosphate values. Although the relationship is weak, the slight negative autocorrelation suggests potential areas for further investigation into the socio-environmental dynamics at play.
+Future analyses could explore additional variables, different spatial scales, and more sophisticated spatial modeling techniques to further understand the patterns observed in this study.
+
+
+
