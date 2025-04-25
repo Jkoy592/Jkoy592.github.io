@@ -39,7 +39,8 @@ redirect_from:
 * Watershed Science and Management
 * Wetland Ecology & Forest Ecology
 * Statistics for Biological Sciences
-* Chemistry & Ecology
+* Introductory Chemistry Lab 
+* Chemistry, Biology, & Ecology
 
 ## Technical Proficiencies
 
