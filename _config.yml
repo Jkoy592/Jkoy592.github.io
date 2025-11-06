@@ -11,7 +11,7 @@ locale                   : "en-US"
 title                    : "Jason Koylass' Portfolio"
 title_separator          : "-"
 name                     : &name "Jason Koylass"
-description              : "Undergraduate Student Geography and Environmental Systems (B.S.) at UMBC "
+description              : "UMBC Alumni - Geography and Environmental Science (B.S.)"
 url                      : https://Jkoy592.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "Jkoy592/Jkoy592.github.io"
@@ -25,13 +25,13 @@ author:
   name: "Jason Koylass"
   pronouns: # example: "he/him"  
   bio: >
-    Undergraduate Student Geography and Environmental Systems (B.S.) at UMBC. 
-    My interests include natural resource management, conservation management, 
+    UMBC Alumni Geography and Environmental Systems (B.S.) w/ GIScience Certificate. 
+    My interests include natural resource management, conservation management,
     and GIS related work.
   location: "Earth"
-  employer: "University of Maryland Baltimore County"
-  uri: # URL
-  email: "jak5@umbc.edu"
+  employer: "Straughan Environmental, Columbia,MD"
+  LinkedIN: "https://www.linkedin.com/in/jason-k-9a1407134"
+  email: "koyjaso1@gmail.com"
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
