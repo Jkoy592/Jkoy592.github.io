@@ -14,7 +14,7 @@ redirect_from:
 * **Bachelor of Science in Geography and Environmental Science** | GIS Science Certificate
   University of Maryland, Baltimore County (UMBC) – Baltimore, MD | May 2025
 
-* **Relevant Coursework:** Watershed Science & Management • GIS & Remote Sensing • Spatial Data Analysis • Wetland Ecology • Environmental/Biological Statistics • Forest Ecology • Weather and Climate*
+* **Relevant Coursework:** • Watershed Science & Management • GIS & Remote Sensing • Spatial Data Analysis • Wetland Ecology • Environmental/Biological Statistics • Forest Ecology • Weather & Climate
 ## Technical Skills
  
 * **GIS & Mapping:** ArcGIS Pro, QGIS, Google Earth Engine, ENVI, Total Station GPS, Geodatabase Management, Spatial Analysis, Image Processing
